@@ -67,11 +67,40 @@ This project delves into the realm of option pricing by combining the traditiona
 
 
     
+## 2. ANN Model Development Summary
 
-**2. ANN Model Development**
+**Key Highlights:**
 
-* **Architecture and training:** (Provide details, potentially with a visual representation of the model architecture)
-* **Performance evaluation:** (Include key metrics, presented visually using charts or graphs)
+- **Architecture:**
+    - The model is a deep neural network with 5 dense layers.
+    - The first layer has 128 neurons, followed by layers of 64, 32, 32, and 8 neurons.
+    - All hidden layers use ReLU activation.
+    - The output layer has a single neuron with linear activation for regression.
+    - ![Optional image of architecture diagram](Images/architecture_diagram.png)
+
+- **Training:**
+    - The model was trained using the Adam optimizer and mean squared error (MSE) loss function.
+    - Early stopping was implemented to halt training if validation loss didn't improve after 10 consecutive epochs.
+    - The model was trained for a maximum of 1000 epochs with a batch size of 32.
+    - 30% of the training data was used for validation.
+
+- **Evaluation:**
+    - the model shows 0.0208 loss on test data, train_loss: 0.0211, validation_loss: 0.0266
+    - ![Optional image of evaluation results plot](Images/evaluation_plot.png)
+
+- **Analysis and Discussion:**
+    - (Highlight major findings and insights from the model's performance here.)
+    - (Discuss potential limitations and areas for future improvement, including consideration of dropout activation.)
+
+**For more detailed explanations and code, please refer to the following notebooks:**
+
+- (Link or path to notebook 1)
+- (Link or path to notebook 2)
+
+**Additional Notes:**
+
+- (Add any relevant observations or conclusions not covered in the notebooks.)
+
 
 **3. Comparative Analysis**
 
