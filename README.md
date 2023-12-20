@@ -4,7 +4,6 @@
 
 ## Overview
 
-[Insert a visually engaging image or animation showcasing option pricing concepts or models]
 
 This project delves into the realm of option pricing by combining the traditional Black-Scholes model with the power of artificial neural networks (ANNs). It aims to:
 
@@ -94,8 +93,7 @@ This project delves into the realm of option pricing by combining the traditiona
 
 **For more detailed explanations and code, please refer to the following notebooks:**
 
-- (Link or path to notebook 1)
-- (Link or path to notebook 2)
+- [notebook containing the modelling](Modelling_and_Results.ipynb)
 
 **Additional Notes:**
 
@@ -104,29 +102,22 @@ This project delves into the realm of option pricing by combining the traditiona
 
 **3. Comparative Analysis**
 
-* **ANN model vs. Black-Scholes model:** (Highlight insights and findings, potentially using a table or graph to compare results)
+**Table 1: Performance Metrics**
+
+| Metric         | BS Solution | AI Solution |
+|----------------|-------------|-------------|
+| Mean Squared Error | 7657.621653 | 123.939916 |
+| Mean Absolute Error | 313.412431 | 2.380170 |
+| Mean Absolute Percentage Error | 14.411696 | 5.983459 |
+
+**Plot:**
+
+![Performance comparison plot](Images/three_images_plot.png)
 
 **4. Web Application**
 
 * **Functionality:** Option price prediction
 * **Code:** `web_app` folder
-* **Instructions:** (Guide users on how to run the app, including visual examples if applicable)
+* **Instructions:** link to the app: [website](https://pdeprofiters.onrender.com/)
 
-## Getting Started
 
-1. Clone this repository.
-2. Install required libraries: (List dependencies)
-3. Explore the code and data.
-4. Run the web application: (Provide instructions)
-
-## Contributing
-
-We welcome contributions! Please refer to the `CONTRIBUTING.md` file for guidelines.
-
-**Additional Information**
-
-* (Insert any relevant links, citations, or further details)
-
-## Visuals
-
-* (Consider incorporating additional images or diagrams to illustrate key concepts or results)
