@@ -13,7 +13,7 @@ This project delves into the realm of option pricing by combining the traditiona
 
 ## Key Components
 
-**1. Data Collection and Analysis**
+### 1. Data Collection and Analysis
 
 * **Dataset:**
     * Source: Yahoo Finance API
@@ -33,40 +33,40 @@ This project delves into the realm of option pricing by combining the traditiona
     * Preprocessing and analysis details: `Data_collection_analysis` file
     * **Data description:**
 
-| Feature       | Count | Mean       | Std Dev    | Min        | 25%       | 50%       | 75%       | Max        |
-|----------------|-------|------------|------------|------------|-----------|-----------|-----------|------------|
-| strike         | 35727  | 163.558230 | 380.722103 | 0.350000   | 20.000000 | 50.000000 | 155.000000 | 5400.000000 |
-| lastPrice      | 35727  | 33.963996  | 100.049276 | 0.010000   | 0.440000   | 4.400000  | 20.150000  | 1499.750000 |
-| impliedVolatility | 35727  | 0.165873  | 0.697095  | 0.000000   | 0.000010   | 0.000010  | 0.125009  | 39.875004  |
-| dates diff     | 35727  | 187.674280 | 234.796544 | 2.000000   | 23.000000  | 65.000000  | 262.000000 | 967.000000 |
-| Stock price    | 35727  | 115.886382 | 135.571782 | 0.860300   | 19.219999 | 49.340000  | 148.839996 | 504.045685 |
+   | Feature       | Count | Mean       | Std Dev    | Min        | 25%       | 50%       | 75%       | Max        |
+   |----------------|-------|------------|------------|------------|-----------|-----------|-----------|------------|
+   | strike         | 35727  | 163.558230 | 380.722103 | 0.350000   | 20.000000 | 50.000000 | 155.000000 | 5400.000000 |
+   | lastPrice      | 35727  | 33.963996  | 100.049276 | 0.010000   | 0.440000   | 4.400000  | 20.150000  | 1499.750000 |
+   | impliedVolatility | 35727  | 0.165873  | 0.697095  | 0.000000   | 0.000010   | 0.000010  | 0.125009  | 39.875004  |
+   | dates diff     | 35727  | 187.674280 | 234.796544 | 2.000000   | 23.000000  | 65.000000  | 262.000000 | 967.000000 |
+   | Stock price    | 35727  | 115.886382 | 135.571782 | 0.860300   | 19.219999 | 49.340000  | 148.839996 | 504.045685 |
 
-<div style="display:flex; flex-direction:row;">
-    <div style="flex:1; text-align:center;">
-        <img src="Images/option_price_hist.png" alt="Histogram of Option Prices" width="300" height="200"/>
-        <br/>
-        <p><strong>Explanation:</strong> This histogram visualizes the distribution of option prices in the dataset</p>
-    </div>
-
+   <div style="display:flex; flex-direction:row;">
+       <div style="flex:1; text-align:center;">
+           <img src="Images/option_price_hist.png" alt="Histogram of Option Prices" width="300" height="200"/>
+           <br/>
+           <p><strong>Explanation:</strong> This histogram visualizes the distribution of option prices in the dataset</p>
+       </div>
+   
    <div style="flex:1; text-align:center;">
-        <img src="Images/strike_option_scatter.png" alt="Scatter plot of Option Prices with Strike" width="300" height="200"/>
-        <br/>
-        <p><strong>Explanation:</strong> This scatterplot visualizes the relation between option price and strike in the dataset</p>
-    </div>
-
+           <img src="Images/strike_option_scatter.png" alt="Scatter plot of Option Prices with Strike" width="300" height="200"/>
+           <br/>
+           <p><strong>Explanation:</strong> This scatterplot visualizes the relation between option price and strike in the dataset</p>
+       </div>
+   
    <div style="flex:1; text-align:center;">
-        <img src="Images/3d_option_price.png" alt="3d scatter plot of Option Prices" width="300" height="300"/>
-        <br/>
-        <p><strong>Explanation:</strong> This scatterplot visualizes the relation between option price and (stock price, time to expire) in the dataset</p>
-    </div>
-</div>
+           <img src="Images/3d_option_price.png" alt="3d scatter plot of Option Prices" width="300" height="300"/>
+           <br/>
+           <p><strong>Explanation:</strong> This scatterplot visualizes the relation between option price and (stock price, time to expire) in the dataset</p>
+       </div>
+   </div>
 
 
 
 
 
     
-## 2. ANN Model Development Summary
+### 2. ANN Model Development Summary
 
 **Key Highlights:**
 
@@ -75,7 +75,7 @@ This project delves into the realm of option pricing by combining the traditiona
     - The first layer has 128 neurons, followed by layers of 64, 32, 32, and 8 neurons.
     - All hidden layers use ReLU activation.
     - The output layer has a single neuron with linear activation for regression.
-    - ![Optional image of architecture diagram](Images/architecture_diagram.png)
+      ![Optional image of architecture diagram](Images/architecture_diagram.png)
 
 - **Training:**
     - The model was trained using the Adam optimizer and mean squared error (MSE) loss function.
@@ -85,34 +85,28 @@ This project delves into the realm of option pricing by combining the traditiona
 
 - **Evaluation:**
     - the model shows 0.0208 loss on test data, train_loss: 0.0211, validation_loss: 0.0266
-    - ![Optional image of evaluation results plot](Images/evaluation_plot.png)
+      ![Optional image of evaluation results plot](Images/evaluation_plot.png)
 
-- **Analysis and Discussion:**
-    - (Highlight major findings and insights from the model's performance here.)
-    - (Discuss potential limitations and areas for future improvement, including consideration of dropout activation.)
 
 **For more detailed explanations and code, please refer to the following notebooks:**
 
 - [notebook containing the modelling](Modelling_and_Results.ipynb)
 
-**Additional Notes:**
-
-- (Add any relevant observations or conclusions not covered in the notebooks.)
 
 
-**3. Comparative Analysis**
+### 3. Comparative Analysis
 
-**Table 1: Performance Metrics**
+* **Table 1: Performance Metrics**
 
-| Metric         | BS Solution | AI Solution |
-|----------------|-------------|-------------|
-| Mean Squared Error | 7657.621653 | 123.939916 |
-| Mean Absolute Error | 313.412431 | 2.380170 |
-| Mean Absolute Percentage Error | 14.411696 | 5.983459 |
+   | Metric         | BS Solution | AI Solution |
+   |----------------|-------------|-------------|
+   | Mean Squared Error | 7657.621653 | 123.939916 |
+   | Mean Absolute Error | 313.412431 | 2.380170 |
+   | Mean Absolute Percentage Error | 14.411696 | 5.983459 |
 
-**Plot:**
+* **Plot:**
 
-![Performance comparison plot](Images/three_images_plot.png)
+   ![Performance comparison plot](Images/three_images_plot.png)
 
 **4. Web Application**
 
