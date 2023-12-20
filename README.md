@@ -42,7 +42,10 @@ This project delves into the realm of option pricing by combining the traditiona
 | dates diff     | 35727  | 187.674280 | 234.796544 | 2.000000   | 23.000000  | 65.000000  | 262.000000 | 967.000000 |
 | Stock price    | 35727  | 115.886382 | 135.571782 | 0.860300   | 19.219999 | 49.340000  | 148.839996 | 504.045685 |
 
-    * [Consider adding a data visualization to illustrate key dataset characteristics]
+   ![Histogram of Option Prices](images/option_price_hist.png)
+
+* **Explanation:** This histogram visualizes the distribution of option prices in the dataset
+
     
 
 **2. ANN Model Development**
